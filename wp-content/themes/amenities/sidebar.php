@@ -1,8 +1,9 @@
-<div id="sidebar">
-
-	<h5>POSTS</h5>
-    <ul class="categorias">
-        <?php wp_list_cats() ?>
-    </ul>
-
+<?php 
+	
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	return;
+}
+?>
+<div class="sidebar">
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </div>
