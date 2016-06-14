@@ -168,3 +168,11 @@ ol.commentlist ul li{
     ul.children ul.children li.comment{
     	margin-left: 0 !important;
     }
+
+.sidebar{
+
+
+
+
+	display: inline-block;
+}
