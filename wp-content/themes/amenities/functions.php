@@ -29,7 +29,7 @@
  * Twenty Sixteen only works in WordPress 4.4 or later.
  */
 
- 
+ wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',false,'1.1','all');
 
 
 if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) {

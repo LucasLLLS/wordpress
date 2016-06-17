@@ -16,16 +16,16 @@
     <?php if ( have_comments() ) : ?>
  
         <ol class="commentlist">
-        <?php wp_list_comments('avatar_size=64&type=comment'); ?>
-    </ol>
- 
+            <?php wp_list_comments('avatar_size=64&type=comment&max_depth=2'); ?>
+        </ol>
+    
         <?php if ($wp_query->max_num_pages > 1) : ?>
         <div class="pagination">
-        <ul>
-            <li class="older"><?php previous_comments_link('Anteriores'); ?></li>
-            <li class="newer"><?php next_comments_link('Novos'); ?></li>
-        </ul>
-    </div>
+            <ul>
+                <li class="older"><?php previous_comments_link('Anteriores'); ?></li>
+                <li class="newer"><?php next_comments_link('Novos'); ?></li>
+            </ul>
+        </div>
     <?php endif; ?>
  
     <?php endif; ?>

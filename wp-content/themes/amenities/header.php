@@ -12,19 +12,38 @@
  
 </head>
 <body>
-<div id="corpo">
-    <div id="header">
-        <h1><?php bloginfo('name'); ?></h1>
-        <h2><?php bloginfo('description'); ?></h2>
-         
-        <ul id="nav">
 
 
-        
-            
-                <?php wp_list_pages('tittle_li=') ?>
+	<nav class="navbar navbar-default">
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#"><?php bloginfo('title'); ?></a>
+	    </div>
 
-                <!--Mostrar páginas : <?php wp_list_pages('title_li='); ?> -->
-            
-        </ul>
-    </div>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	         <?php wp_list_pages('title_li=') ?>
+	    
+	      </ul>
+	     
+
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<div class="container">
+	    <div id="header">
+	        <h1></h1>
+	        <h2><?php bloginfo('description'); ?></h2>
+	         
+	        
+
+	        
+	    </div>

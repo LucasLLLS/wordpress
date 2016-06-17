@@ -1,19 +1,23 @@
 <?php get_header(); ?>
     <div id="conteudo">
-        <div id="artigos">
+        <div id="artigos" class="col-sm-9">
          
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <div class="artigo">
                     <h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
                     <p>Postado por <?php the_author() ?> em <?php the_time('d/M/Y') ?> - <?php comments_popup_link('Sem Comentários', '1 Comentário', '% Comentários', 'comments-link', ''); ?> <?php edit_post_link('(Editar)'); ?></p>
                     <p><?php the_content(); ?></p>
+
+                    <h2><?php the_field( 'Autor' ) ?></h2>
+
+                    <img src="<?php the_field( 'capa' ) ?>" alt="">
+
+                    <p><?php the_field( 'codigo' ) ?></p>
                 </div>
 
-                <h2><?php the_field( 'Autor' ) ?></h2>
+                
 
-                <img src="<?php the_field( 'capa' ) ?>" alt="">
-
-                <p><?php the_field( 'codigo' ) ?></p>
+                
                 
                  
                 <?php comments_template(); ?>
@@ -27,7 +31,11 @@
             <?php endif; ?>
              
         </div>
-         
+
         <?php get_sidebar(); ?>
+         
+        
     </div>
+
+    
 <?php get_footer(); ?>

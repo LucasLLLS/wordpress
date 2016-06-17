@@ -4,6 +4,6 @@
 	return;
 }
 ?>
-<div class="sidebar">
+<div class="sidebar col-sm-3">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </div>
